@@ -1,0 +1,538 @@
+@charset "UTF-8";
+/* Cover photo: https://commons.wikimedia.org/wiki/File:Beer_House_brewery.jpg */
+/* http://ianlunn.github.io/Hover/ */
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #E9C893;
+  background-opacity: 50%;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white; }
+
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+/* Sweep To Bottom */
+.hvr-sweep-to-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.hvr-sweep-to-bottom:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #E9C893;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+  color: white; }
+
+.hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1); }
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color; }
+
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #E9C893;
+  color: white; }
+
+.navigation {
+  height: 70px;
+  background: #1E392A; }
+
+.brand {
+  top: 0;
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  font-size: 1.4em; }
+  .brand a, .brand a:visited {
+    color: #ffffff;
+    text-decoration: none; }
+  .brand h1 {
+    margin: 0px; }
+
+.nav-container {
+  margin: 0 auto; }
+
+nav {
+  float: right; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      float: left;
+      position: relative; }
+      nav ul li a,
+      nav ul li a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: 70px;
+        background: #1E392A;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Rosario', sans-serif; }
+        nav ul li a:hover,
+        nav ul li a:visited:hover {
+          background: #3CC47C;
+          color: #ffffff; }
+        nav ul li a:not(:only-child):after,
+        nav ul li a:visited:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾'; }
+      nav ul li ul li {
+        min-width: 190px; }
+        nav ul li ul li a {
+          padding: 15px;
+          line-height: 20px;
+          font-family: 'Rosario', sans-serif; }
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); }
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #1E392A;
+  height: 70px;
+  width: 70px; }
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px; }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out; }
+  #nav-toggle span:before {
+    top: -10px; }
+  #nav-toggle span:after {
+    bottom: -10px; }
+  #nav-toggle.active span {
+    background-color: transparent; }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0; }
+    #nav-toggle.active span:before {
+      transform: rotate(45deg); }
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg); }
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px; }
+
+* {
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-size: 15px; }
+
+.banner {
+  height: 35rem;
+  background-image: url("/assets/uploads/Beer_House_brewery_green.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.banner h1 {
+  font-size: 6rem;
+  font-weight: 300;
+  color: white; }
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif; }
+
+h3 {
+  color: #3CC47C; }
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  clear: both; }
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 30px; }
+
+.header, .footer {
+  display: block;
+  color: #fff;
+  background: #1E392A; }
+  .header a, .footer a {
+    color: #d3d3d3; }
+
+.header:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.content {
+  padding-top: 70px;
+  text-align: center;
+  display: block; }
+  .content h1 {
+    font-weight: bold; }
+  .content h2 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif; }
+  .content a {
+    text-decoration: none; }
+  .content a:hover {
+    text-decoration: underline; }
+  .content p {
+    font-family: 'Open', sans-serif;
+    font-size: 20px; }
+
+.content:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0 0 7px 7px;
+  font-size: 12px; }
+
+.menu {
+  height: 70px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+
+body.scrolled .menu {
+  opacity: 0.2;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s; }
+
+body.scrolled .menu:hover {
+  opacity: 1.0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s; }
+
+.recentNews {
+  padding-top: 100px;
+  padding-bottom: 40px; }
+  .recentNews ul {
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    width: 70%;
+    margin: auto; }
+  .recentNews li:hover p a {
+    color: #828081; }
+  .recentNews li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    padding-right: 25px;
+    text-align: center; }
+    .recentNews li .textLink {
+      margin: 10px 5px 10px 20px;
+      display: inline-block;
+      vertical-align: middle;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      max-width: 150px;
+      font-family: 'Open Sans', sans-serif; }
+    .recentNews li p a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 30px;
+      max-width: 20px;
+      overflow-wrap: break-word;
+      color: black; }
+    .recentNews li img {
+      vertical-align: middle; }
+
+.left {
+  max-width: 49%;
+  float: left;
+  text-align: left; }
+  .left h3 {
+    color: #828081; }
+
+.right {
+  width: 50%;
+  text-align: left; }
+
+.newsList {
+  padding: 15px;
+  list-style-type: none;
+  font-size: 25px;
+  text-decoration: none; }
+  .newsList li {
+    padding: 0px;
+    border: 2px solid black;
+    margin: 5px;
+    width: 60%;
+    min-width: 200px;
+    text-decoration: none; }
+    .newsList li span {
+      display: inline-block; }
+  .newsList h3 {
+    margin: 10px;
+    text-decoration: none; }
+
+.beerList {
+  padding: 15px;
+  list-style-type: none;
+  font-size: 25px; }
+  .beerList a {
+    color: #828081; }
+  .beerList li {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid black;
+    margin: 5px; }
+    .beerList li span {
+      display: inline-block; }
+  .beerList h3 {
+    margin: 10px; }
+
+.beerContainer {
+  padding-top: 50px;
+  width: 100%;
+  display: inline-block; }
+
+.imageWrapper__beer {
+  float: left; }
+
+.largeBeerImage {
+  padding: 20px; }
+
+.beerText {
+  float: none;
+  text-align: left;
+  margin-top: 10px;
+  padding: 20px; }
+  .beerText h1 {
+    font-size: 4em;
+    margin: 10px 0 10px 0; }
+
+.newsContainer {
+  padding-top: 50px;
+  display: inline-block;
+  width: 90%; }
+
+.imageWrapper__news {
+  display: inline-block;
+  width: 52%; }
+
+.newsImage {
+  padding: 20px;
+  display: inline-block; }
+
+.newsText {
+  text-align: right;
+  display: inline-block;
+  margin-top: 10px;
+  min-width: 200px;
+  max-width: 500px;
+  font-size: 3rem; }
+
+@keyframes anim {
+  0% {
+    left: 20px; }
+  50% {
+    left: 50%; }
+  100% {
+    left: 20px; } }
+@media screen and (min-width: 1201px) {
+  .newsHead {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 50px;
+    margin: -35px -5px 10px 0;
+    animation: anim 20s linear infinite; } }
+@media screen and (max-width: 1200px) {
+  .newsHead {
+    text-align: center;
+    display: inline-block;
+    padding-top: 40px;
+    padding-left: 50px;
+    margin: -35px -5px 10px 0;
+    animation: animm 5s linear infinite; }
+
+  .recentNews {
+    padding-top: 30px; } }
+@media screen and (max-width: 1044px) {
+  .beerText {
+    text-align: center;
+    display: inline-block; }
+
+  .imageWrapper__beer {
+    float: none;
+    text-align: center;
+    display: inline-block; } }
+@media screen and (max-width: 768px) {
+  .header {
+    height: 70px; }
+
+  .newsContainer {
+    width: 100%; }
+    .newsContainer .newsText {
+      padding: 0 15px;
+      display: block;
+      text-align: center;
+      max-width: 100%; }
+    .newsContainer .imageWrapper {
+      width: 100%; }
+    .newsContainer .newsImage {
+      vertical-align: middle;
+      max-width: 100%;
+      float: none; } }
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block; }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px; }
+    nav ul {
+      display: none; }
+      nav ul li {
+        float: none; }
+        nav ul li a {
+          padding: 15px;
+          line-height: 20px; }
+        nav ul li ul li a {
+          padding-left: 30px; }
+
+  .nav-dropdown {
+    position: static; } }
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important; } }
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important; }
+
+  .navigation {
+    height: 70px;
+    background: #1E392A; }
+
+  .nav-container {
+    margin: 0 auto; }
+
+  .brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    font-size: 1.4em; }
+    .brand a, .brand a:visited {
+      color: #828081;
+      text-decoration: none; } }
+
+/*# sourceMappingURL=style3.css.map */
