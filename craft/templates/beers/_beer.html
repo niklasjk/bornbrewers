@@ -1,0 +1,34 @@
+{#
+ # Beer entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a Beer entry’s URL is
+ # requested. That’s because the Beer section’s Template setting is
+ # set to “beer/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested Beer entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<article>
+		<div class="beerContainer">
+			
+			{% for block in entry.campaignMatrix %}
+				<div class="imageWrapper__beer">
+					<img class="largeBeerImage" src="{{ entry.beerImage.first().getUrl('beerInfo') }}" alt="{{ image.title }}">
+				</div>
+				<div class="beerText"><h1>{{ entry.title }}</h1><br><h3>Style: {{ block.style }}<br>Alcohol by volume (ABV): {{ block.abv }}<br>
+				
+					<p>Added {{ entry.postDate.format('F d, Y') }}</p></h3>
+					<p class="campaignInfo">{{ block.campaignInfo|striptags('<strong><em><br>')|raw }}</p>
+				</div><!-- /.beerText -->
+			{% endfor %}
+		</div>
+	</article>
+{% endblock %}
