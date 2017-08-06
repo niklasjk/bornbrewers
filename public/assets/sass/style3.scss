@@ -425,6 +425,20 @@ body.scrolled .menu:hover {
 	}
 }
 
+.left{
+	h3 {
+		color: $tin;
+	}
+	max-width: 49%;
+    float:left;
+	text-align:left;
+}
+
+.right{
+	width: 50%;
+    text-align:left;
+}
+
 .button {
 	font-family: 'Rosario', sans-serif; 
 }
@@ -436,7 +450,6 @@ body.scrolled .menu:hover {
 }
 
 .button__next {
-	@extend .button;
 	float: right;
 }
 
@@ -448,7 +461,6 @@ body.scrolled .menu:hover {
 }
 
 .button__previous {
-	@extend .button;
 	float: left;
 }
 
@@ -534,6 +546,10 @@ body.scrolled .menu:hover {
 	   float:none;
 	   text-align: center;
 	   display: inline-block;
+	   img {
+		   width: 100%;
+		   height: auto;
+	   }
    }
 }
 
@@ -578,6 +594,18 @@ body.scrolled .menu:hover {
 		   height: auto;
 	   }
    }
+   .left{
+		h3 {
+			color: $tin;
+		}
+		width: 100%;
+		text-align: center;
+	}
+
+	.right{
+		width: 100%;
+		text-align:center;
+	}
 }
 @media screen and (min-width: $breakpoint + 1) {
 	.nav-list {

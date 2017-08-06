@@ -422,7 +422,18 @@ body.scrolled .menu:hover {
     font-size: 4em;
     margin: 10px 0 10px 0; }
 
-.button, .text__next, .button__next, .text__previous, .button__previous {
+.left {
+  max-width: 49%;
+  float: left;
+  text-align: left; }
+  .left h3 {
+    color: #828081; }
+
+.right {
+  width: 50%;
+  text-align: left; }
+
+.button, .text__next, .text__previous {
   font-family: 'Rosario', sans-serif; }
 
 .text__next {
@@ -510,7 +521,10 @@ body.scrolled .menu:hover {
   .imageWrapper__beer {
     float: none;
     text-align: center;
-    display: inline-block; } }
+    display: inline-block; }
+    .imageWrapper__beer img {
+      width: 100%;
+      height: auto; } }
 @media only screen and (max-width: 800px) {
   .nav-mobile {
     display: block; }
@@ -542,7 +556,17 @@ body.scrolled .menu:hover {
     display: inline-block; }
     .imageWrapper__news img {
       width: 100%;
-      height: auto; } }
+      height: auto; }
+
+  .left {
+    width: 100%;
+    text-align: center; }
+    .left h3 {
+      color: #828081; }
+
+  .right {
+    width: 100%;
+    text-align: center; } }
 @media screen and (min-width: 801px) {
   .nav-list {
     display: block !important; } }
