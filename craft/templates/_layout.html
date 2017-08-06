@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-	<link rel="stylesheet" href="https://bornbrewers.herokuapp.com/assets/css/style3.css" type="text/css"/> 
+	<link rel="stylesheet" href="https://bornbrewers.herokuapp.com/assets/css/style.css" type="text/css"/> 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Rosario:700i" rel="stylesheet">
 	<script src="https://bornbrewers.herokuapp.com/assets/js/jquery-3.2.1.js"> </script>
 </head>
@@ -55,17 +55,25 @@
 	</div> <!-- /.container -->
 </body>
 <script>
-var div = document.getElementById('brand');
 window.addEventListener('scroll', function () {
-  document.body.classList[
-    window.scrollY > 20 ? 'add': 'remove'
-  ]('scrolled');
+	document.body.classList[
+		window.scrollY > 20 ? 'add': 'remove'
+	]('scrolled');
 });
 $('#nav-toggle').on('click', function() {
-  this.classList.toggle('active');
+	this.classList.toggle('active');
 });
 $('#nav-toggle').click(function() {
-  $('nav ul').toggle();
+	$('nav ul').toggle();
+	$('nav ul').toggleClass('active');
+  
+});
+$('main').click(function() {
+	if ($('.nav-list').css('display') == 'block' && $('nav ul').hasClass('active') ) {
+		$('nav ul').toggle();	
+		$('nav ul').toggleClass('active');
+		$('#nav-toggle').toggleClass('active');
+    }
 });
 </script>
 </html>
