@@ -301,8 +301,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
-  z-index: 1; }
+  top: 0; }
 
 body.scrolled .menu {
   opacity: 0.2;
@@ -467,20 +466,18 @@ body.scrolled .menu:hover {
   width: 100%; }
 
 .newsText {
-  float: left;
+  float: none;
   text-align: left;
-  display: inline-block;
   margin-top: 10px;
-  width: 40%;
   font-size: 3rem;
   vertical-align: top; }
 
 .imageWrapper__news {
-  padding-top: 70px; }
+  padding-top: 70px;
+  float: right; }
 
 .newsImage {
-  padding: 20px;
-  display: inline-block; }
+  padding: 20px; }
 
 @keyframes anim {
   0% {

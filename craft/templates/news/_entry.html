@@ -28,13 +28,13 @@
 	{% if prevEntry %}<a class="button__previous" href="{{ prevEntry.url }}"><div class="arrow-left"></div></a><a class="text__previous" href="{{ prevEntry.url }}">Previous</a>{% endif %}
 	{% if nextEntry %}<a class="button__next" href="{{ nextEntry.url }}"><div class="arrow-right"></div></a><a class="text__next" href="{{ nextEntry.url }}">Next</a>{% endif %}
 		<div class="newsContainer">
-			<div class="newsText"><h1>{{ entry.title }}</h1><br>
-				<p>Added {{ entry.postDate.format('F d, Y') }}</p></h2>
-				<p>{{ entry.body|striptags('<strong><em><br>')|raw }}</p>
-			</div><!-- /.newsText -->
 			<div class="imageWrapper__news">
 				<img class="newsImage" src="{{ entry.newsImage.first().getUrl('newsPage') }}" alt="{{ image.title }}">
 			</div>
+			<div class="newsText"><h1>{{ entry.title }}</h1><br>
+				<p>Added {{ entry.postDate.format('F d, Y') }}</p></h2>
+				<p>{{ entry.body }}</p>
+			</div><!-- /.newsText -->
 		</div>
 
 

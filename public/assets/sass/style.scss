@@ -273,7 +273,6 @@ body {
 	position: fixed;
     left: 0; right: 0;
     top: 0;
-	z-index: 1;
 }
 
 body.scrolled .menu {
@@ -486,22 +485,20 @@ body.scrolled .menu:hover {
 }
 
 .newsText {
-	float: left;
+	float: none;
 	text-align: left;
-	display: inline-block;
 	margin-top: 10px;
-	width: 40%;
 	font-size: 3rem;
 	vertical-align: top;
 }
 
 .imageWrapper__news {
 	padding-top: 70px;
+	float: right;
 }
 
 .newsImage {
 	padding: 20px;
-	display: inline-block;
 }
 
 
