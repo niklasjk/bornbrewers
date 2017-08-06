@@ -270,7 +270,6 @@ body {
 	left: 0;
 	padding: 1rem;
 	text-align: center;
-	border-radius: 0 0 7px 7px; 
 	font-size: 12px;
 }
 
@@ -426,15 +425,70 @@ body.scrolled .menu:hover {
 	}
 }
 
+.button {
+	font-family: 'Rosario', sans-serif; 
+}
+.text__next {
+	@extend .button;
+	float: right;
+	padding: 18px 10px 0px 0px;
+	color: black;
+}
+
+.button__next {
+	@extend .button;
+	float: right;
+}
+
+.text__previous {
+	@extend .button;
+	float: left;
+	padding: 18px 0px 0px 10px;
+	color: black;
+}
+
+.button__previous {
+	@extend .button;
+	float: left;
+}
+
+.arrow-right {
+	float: right;
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-left: 30px solid $quartzGreen;
+}
+
+.arrow-left {
+	float: left;
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-right: 30px solid $quartzGreen;
+}
+
 .newsContainer {
 	padding-top: 50px;
+	padding-bottom: 50px;
 	display: inline-block;
-	width: 90%;
+	width: 100%;
+}
+
+.newsText {
+	float: left;
+	text-align: left;
+	display: inline-block;
+	margin-top: 10px;
+	width: 40%;
+	font-size: 3rem;
+	vertical-align: top;
 }
 
 .imageWrapper__news {
-	display: inline-block;
-	width: 52%;
+	padding-top: 70px;
 }
 
 .newsImage {
@@ -442,14 +496,6 @@ body.scrolled .menu:hover {
 	display: inline-block;
 }
 
-.newsText {
-	text-align: right;
-	display: inline-block;
-	margin-top: 10px;
-	min-width: 200px;
-	max-width: 500px;
-	font-size: 3rem;
-}
 
 @keyframes anim {
 	0% {left: 20px; }	
@@ -471,9 +517,7 @@ body.scrolled .menu:hover {
    .newsHead {
 		text-align: center;
 		display: inline-block;
-		padding-top: 40px;
-		padding-left: 50px;
-		margin: -35px -5px 10px 0;
+		padding-top: 20px;
 		animation: animm 5s linear infinite;
 	}
 	.recentNews {
@@ -493,26 +537,7 @@ body.scrolled .menu:hover {
    }
 }
 
-@media screen and (max-width: 768px) {
-	
-	.newsContainer {
-		width: 100%;
-		.newsText {
-			padding: 0 15px;
-			display: block;
-			text-align: center;
-			max-width: 100%;
-		}
-		.imageWrapper {
-			width: 100%;
-		}
-		.newsImage {
-		vertical-align: middle;
-			max-width: 100%;
-			float: none;
-		}
-	}
-}
+
 
 @media only screen and (max-width: $breakpoint) {
 	// Hamburger nav visible on mobile only
@@ -522,23 +547,37 @@ body.scrolled .menu:hover {
 	nav {
 		width: 100%;
 		padding: $nav-height 0 15px;
-	ul {
-		display: none;
-		li {
-			float: none;
-			a {
-				padding: 15px;
-				line-height: 20px;
-			}
-			ul li a {
-				padding-left: 30px;
+		ul {
+			display: none;
+			li {
+				float: none;
+				a {
+					padding: 15px;
+					line-height: 20px;
+				}
+				ul li a {
+					padding-left: 30px;
+				}
 			}
 		}
 	}
-}
-.nav-dropdown {
-	position: static;
+	.nav-dropdown {
+		position: static;
 	}
+	.newsText {
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+   }
+   .imageWrapper__news {
+	   float:none;
+	   text-align: center;
+	   display: inline-block;
+	   img {
+		   width: 100%;
+		   height: auto;
+	   }
+   }
 }
 @media screen and (min-width: $breakpoint + 1) {
 	.nav-list {

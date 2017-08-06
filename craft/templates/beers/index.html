@@ -19,12 +19,8 @@
 		{% for entry in craft.entries.section('beers').find() %}
 			<li class="hvr-sweep-to-bottom">
 				<div>
-					<a href="{{ entry.url }}" ><img class="beerImage" src="{{ entry.beerImage.first().getUrl('newsPage') }}" alt="{{ image.title }}"></a>
-					<a href="{{ entry.url }}"><h3>{{ entry.title }}</h3>
-				
-								
-				
-					</a>
+					<a href="{{ entry.url }}" ><img class="beerImage" src="{{ entry.beerImage.first().getUrl('beerList') }}" alt="{{ image.title }}"></a>
+					<a href="{{ entry.url }}"><h3>{{ entry.title }}</h3></a>
 				</div>
 			</li>
 		{% endfor %}

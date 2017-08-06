@@ -20,13 +20,11 @@
 {% extends "_layout" %}
 
 {% block content %}
-<div class="banner">
+	<div class="banner">
 		<h1>Born Brewers</h1>
-		</div>
+	</div>
 	{{ entry.body }}
-	
-	<h2 class="newsHead">Recent News /// Recent News </h2>
-		
+	<h2 class="newsHead">Recent News /// Recent News </h2>	
 	<ul class="recentNews">
 		{% for entry in craft.entries.section('news').limit(3).find() %}
 			
