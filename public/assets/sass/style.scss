@@ -190,8 +190,8 @@ h3 {
 
 body {
 	height: 100%;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	clear: both;
 }
 
@@ -266,13 +266,16 @@ body {
 	padding: 1rem;
 	text-align: center;
 	font-size: 12px;
+	font-family: 'oswald', sans-serif; 
+	letter-spacing: 0.5px;
+
 }
 
 .menu {
 	height: $nav-height;
 	position: fixed;
-    left: 0; right: 0;
-    top: 0;
+	left: 0; right: 0;
+	top: 0;
 }
 
 body.scrolled .menu {
@@ -307,7 +310,7 @@ body.scrolled .menu:hover {
 		display: inline-block;
 		margin-left: 10px;
 		margin-bottom: 30px;
-		padding-right:  25px;
+		padding-right: 25px;
 		text-align: center;
 		.textLink {
 			margin: 10px 5px 10px 20px;
@@ -338,13 +341,13 @@ body.scrolled .menu:hover {
 		color: $tin;
 	}
 	max-width: 49%;
-    float:left;
+	float:left;
 	text-align:left;
 }
 
 .right{
 	width: 50%;
-    text-align:left;
+	text-align:left;
 }
 
 .newsList {
@@ -424,13 +427,13 @@ body.scrolled .menu:hover {
 		color: $tin;
 	}
 	max-width: 49%;
-    float:left;
+	float:left;
 	text-align:left;
 }
 
 .right{
 	width: 50%;
-    text-align:left;
+	text-align:left;
 }
 
 .button {
@@ -519,7 +522,7 @@ body.scrolled .menu:hover {
 }
 
 @media screen and (max-width: 1200px) {
-   .newsHead {
+	.newsHead {
 		text-align: center;
 		display: inline-block;
 		padding-top: 20px;
@@ -531,11 +534,11 @@ body.scrolled .menu:hover {
 }
 
 @media screen and (max-width: 1044px) {
-   .beerText {
+	.beerText {
 		text-align: center;
 		display: inline-block;
    }
-   .imageWrapper__beer {
+	.imageWrapper__beer {
 	   float:none;
 	   text-align: center;
 	   display: inline-block;
@@ -592,11 +595,14 @@ body.scrolled .menu:hover {
 		width: 100%;
 		text-align: center;
 	}
-
 	.right{
 		width: 100%;
 		text-align:center;
 	}
+	.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+		background-color: rgba(255, 255, 255, 0);
+		color: $tin;
+	}		
 }
 
 @media screen and (min-width: $breakpoint + 1) {

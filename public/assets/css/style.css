@@ -294,7 +294,9 @@ body {
   left: 0;
   padding: 1rem;
   text-align: center;
-  font-size: 12px; }
+  font-size: 12px;
+  font-family: 'oswald', sans-serif;
+  letter-spacing: 0.5px; }
 
 .menu {
   height: 70px;
@@ -552,7 +554,11 @@ body.scrolled .menu:hover {
 
   .right {
     width: 100%;
-    text-align: center; } }
+    text-align: center; }
+
+  .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+    background-color: rgba(255, 255, 255, 0);
+    color: #828081; } }
 @media screen and (min-width: 801px) {
   .nav-list {
     display: block !important; }
