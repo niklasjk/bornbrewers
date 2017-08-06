@@ -214,6 +214,9 @@ body {
 	padding-bottom: 30px;
 }
 
+.header {
+	height: 0;
+}
 .header, .footer {
 	display: block; 
 	color: #fff; 
@@ -477,6 +480,7 @@ body.scrolled .menu:hover {
 		padding-top: 30px;
 	}
 }
+
 @media screen and (max-width: 1044px) {
    .beerText {
 		text-align: center;
@@ -488,10 +492,9 @@ body.scrolled .menu:hover {
 	   display: inline-block;
    }
 }
+
 @media screen and (max-width: 768px) {
-	.header {
-		height: $nav-height;
-	}
+	
 	.newsContainer {
 		width: 100%;
 		.newsText {
@@ -534,15 +537,15 @@ body.scrolled .menu:hover {
 	}
 }
 .nav-dropdown {
-position: static;
+	position: static;
+	}
 }
-}
-@media screen and (min-width: $breakpoint) {
+@media screen and (min-width: $breakpoint + 1) {
 	.nav-list {
 		display: block !important;
 	}
 }
-@media screen and (min-width: $breakpoint) {
+@media screen and (min-width: $breakpoint + 1) {
 	.nav-list {
 		display: block !important;
 	}
@@ -560,7 +563,6 @@ position: static;
 		line-height: $nav-height;
 		font-size: 1.4em;
 		a, a:visited {
-			color: $tin;
 			text-decoration: none;
 		}
 	}
